@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <form method="POST" action="{{ url_for('cadastrar_user') }}" style="margin-bottom: 15rem !important;">
+        <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+        <div class="mb-3">
+            <label style="color: #d1cfbf;">Nome:</label>
+            <input class="form-control" type="text" name="nome" required>
+        </div>
+        <div class="mb-3">
+            <label style="color: #d1cfbf;">Username:</label>
+            <input class="form-control" type="text" name="usuario" required>
+        </div>
+        <div class="mb-3">
+            <label style="color: #d1cfbf;">Senha:</label>
+            <input class="form-control" type="password" name="senha" required>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <button class="btn btn-primary" type="submit" style="margin-top: 1rem;">Sign Up ></button>
+            <p style="display: flex;padding-left: 1rem; padding-top: 2rem; color: #fff;">Novo no InCine?<a href="{{ url_for('login') }}" style="padding-left: 0.5rem; text-decoration: none;color: red;">Entrar</a></p>
+        </div>
+    </form>
+{% endblock %}

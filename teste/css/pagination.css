@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgb(0, 0, 0);
+    margin: 15px auto;
+}
+
+.pagination div{
+    color: white;
+    display: flex;    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border-style: unset;
+    box-shadow: inset 0px 0px 4px #0009;
+    border: solid 1px white;
+}
+
+.pagination div:not(.page){
+    cursor: pointer;
+}
+
+.pagination div:hover:not(.page){
+    background-color: rgb(8, 0, 255);
+}

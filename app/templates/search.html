@@ -1,0 +1,41 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<header>
+    <form action="{{ url_for('search') }}" method="post">
+        <div class="search-container">
+            <label class="search-icon" for="search-input"></label>
+            <input
+                type="text"
+                name="search-input"
+                class="search-input"
+                id="search-input"
+                placeholder="Procurar filmes"
+            />
+        </div>
+    </form>
+</header>
+    <main>
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    {% for movie in movies %}
+                    <div class="col-lg-4 col-sm-6 mb-4" >
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" href="{{ url_for('visualizar', id=movie.id) }}">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{{ movie.poster }}" alt="..."/>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading" style="color: #d1cfbf;">{{ movie.title }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

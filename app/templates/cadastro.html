@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block conteudo %}
+      <form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="overview">Overview</label>
+            <input type="text" id="overview" name="overview" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="avaliacao">Avaliação</label>
+            <input type="text" id="avaliacao" name="avaliacao" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="tot_avaliacao">Número de páginas</label>
+            <input type="text" id="tot_avaliacao" name="tot_avaliacao" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="capa">Capa</label>
+            <input type="file" id="capa" name="capa" accept=".jpg" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <div class="page-header text-center py-3">
+        <h1 style="color: red;">{{ movie.title }}</h1>
+        {% if session['usuario_logado'] %}
+        <a href="{{ url_for('editar', id=movie.id) }}" class="btn btn-primary">Editar</a>
+        <a href="{{ url_for('deletar', id=movie.id) }}" class="btn btn-danger">Deletar</a>
+        {% endif %}
+        <hr style="color: #fff">
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            {% if movie.poster == 'https://image.tmdb.org/t/p/w500/False' %}
+            <img src="{{ url_for('imagem', nome_arquivo=capa) }}" class="card-img-top" alt="...">
+            {% else %}
+            <img src="{{ movie.poster }}" class="card-img-top" alt="...">
+            {% endif %}
+        </div>
+        <div class="col-sm-8">
+            <p class="h4" style="color: #fefefe;"><strong></strong>{{ movie.overview }}</p>
+            </br>
+            <p class="h4" style="color: #fefefe;"><strong>Média de Avaliações: </strong>{{ movie.vote_average }}</p>
+            </br>
+            <p class="h4" style="color: #fefefe;"><strong>Nº de Avaliações: </strong>{{ movie.vote_count}}</p>
+        </div>
+    </div>
+{% endblock %}

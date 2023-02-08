@@ -1,0 +1,19 @@
+.card-container {
+    position: relative;
+    height: 200px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.card-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+}
+
+.card-container:hover img{
+    -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
