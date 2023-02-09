@@ -79,7 +79,7 @@ def deletar(id):
 def visualizar(id):
     movie = Movies.query.filter_by(id=id).first()
     capa_movie = recupera_imagem(id)
-    return render_template('livro.html', movie=movie, capa=capa_movie)
+    return render_template('movie.html', movie=movie, capa=capa_movie)
 
 @app.route('/login')
 def login():
