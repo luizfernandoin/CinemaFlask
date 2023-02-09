@@ -9,7 +9,7 @@
 ### 🏠 [Homepage](https://github.com/luizfernandoin/CinemaFlask)
 
 ###  Aplicação para listagem de filmes.
-![alt text](aplicacao.gif)
+![alt text](aplicacao2.gif)
 
 ### Descrição
 InCine é um serviço web desenvolvido durante o curso Tecnico em Informatica Integrado como requisito **obrigatório** da disciplina de Desenvolvimento de Aplicações Web do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba.
